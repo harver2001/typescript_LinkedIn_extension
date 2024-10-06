@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Chat Enhancement",
+    "version": "1.0",
+    "description": "Enhances LinkedIn chat by adding predefined text and UI.",
+    "permissions": ["activeTab", "scripting"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.linkedin.com/*"],
+            "js": ["content-scripts/content.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "assets/your-logo.png"
+    },
+    "icons": {
+        "16": "assets/your-logo.png",
+        "48": "assets/your-logo.png",
+        "128": "assets/your-logo.png"
+    }
+}
